@@ -4,11 +4,11 @@ import streamlit as st
 from groq import Groq
 
 # Set up the Groq API Key
-GROQ_API_KEY = "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"
-os.environ["GROQ_API_KEY"] = GROQ_API_KEY
+
+# os.environ["GROQ_API_KEY"] = GROQ_API_KEY
 
 # Initialize the Groq client
-client = Groq(api_key=GROQ_API_KEY)
+client = Groq(os.environ[GROQ_API_KEY])
 
 # Streamlit user input
 st.title("Personalized Study Assistant Chatbot")
